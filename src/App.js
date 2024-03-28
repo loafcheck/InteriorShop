@@ -2,11 +2,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import interior from './interior.png';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import interiorImg from './interior.png';
+import bed1 from './bed1.png';
+import bed2 from './bed2.png';
+import bed3 from './bed3.png';
 
 
 function App() {
@@ -38,22 +41,25 @@ function App() {
     </>
 
     <>
-      <div className='main-bg' style={{backgroundImage: `url(${interior})`}}></div>
+      <div className='main-bg' style={{background:`url(${interiorImg})`}}></div>
     </>
 
     <>
     <Container>
-      <Row md={4}>
-        <Col>1 of 3</Col>
-        <Col xs={6}>2 of 3</Col>
-        <Col>3 of 3</Col>
+      <Row className='productRow'>
+        <Col xs={4} className='product'>
+          <img src={bed1} alt='product' />
+        </Col>
+        <Col xs={4} className='product'>
+          <img src={bed2} alt='product' />
+        </Col>
+        <Col xs={4} className='product'>
+          <img src={bed3} alt='product' />
+        </Col>
       </Row>
     </Container>
-    <>
-      <div>
-        
-      </div>
-    </>
+
+
     </>
     </div>
   );

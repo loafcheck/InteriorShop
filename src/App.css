@@ -21,6 +21,12 @@
 .Nav {
   background-color:tomato;
 }
+.product img {
+  /* Set maximum width and height to 100 pixels */
+  max-width: 300px;
+  max-height: 300px;
+  padding: 50px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
