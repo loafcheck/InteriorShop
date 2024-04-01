@@ -1,18 +1,18 @@
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import interiorImg from './interior.png';
-import bed1 from './bed1.png';
-import bed2 from './bed2.png';
-import bed3 from './bed3.png';
+import FurnitureData from './products';
+import data from './data';
 
 
 function App() {
+let [furnitureImg] = useState (data);
+
   return (
     <div className="App">
     <>
@@ -45,23 +45,11 @@ function App() {
     </>
 
     <>
-    <Container>
-      <Row className='productRow'>
-        <Col xs={4} className='product'>
-          <img src={bed1} alt='product' />
-        </Col>
-        <Col xs={4} className='product'>
-          <img src={bed2} alt='product' />
-        </Col>
-        <Col xs={4} className='product'>
-          <img src={bed3} alt='product' />
-        </Col>
-      </Row>
-    </Container>
-
-
+      <FurnitureData/>
     </>
-    </div>
+    <>
+    </>
+  </div>
   );
 }
 
