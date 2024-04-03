@@ -1,15 +1,18 @@
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import interior from './interior.png';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import interiorImg from './interior.png';
+import FurnitureData from './products';
+import data from './data';
 
 
 function App() {
+let [furnitureImg] = useState (data);
+
   return (
     <div className="App">
     <>
@@ -38,19 +41,15 @@ function App() {
     </>
 
     <>
-      <div className='main-bg' style={{backgroundImage: `url(${interior})`}}></div>
+      <div className='main-bg' style={{background:`url(${interiorImg})`}}></div>
     </>
 
     <>
-    <Container>
-      <Row md={4}>
-        <Col>1 of 3</Col>
-        <Col xs={6}>2 of 3</Col>
-        <Col>3 of 3</Col>
-      </Row>
-    </Container>
+      <FurnitureData/>
     </>
-    </div>
+    <>
+    </>
+  </div>
   );
 }
 
