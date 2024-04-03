@@ -11,7 +11,7 @@ import data from './data';
 
 
 function App() {
-let [furnitureImg] = useState (data);
+let [furnitures] = useState (data);
 
   return (
     <div className="App">
